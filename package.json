@@ -1,0 +1,18 @@
+{
+  "name": "express-logger",
+  "description": "Express middleware for log files.",
+  "version": "0.0.1",
+  "homepage": "http://github.com/joehewitt/express-logger",
+  "repository": {
+      "type": "git",
+      "url" : "http://github.com/joehewitt/express-logger.git"
+  },
+  "keywords": ["express", "logger"],
+  "author": "Joe Hewitt <joe@joehewitt.com>",
+  "dependencies": {
+    "datetime": "",
+    "express": ""
+  },
+  "engines": { "node": ">=0.4.0" },
+  "main": "./logger"
+}
