@@ -1,7 +1,7 @@
 express-logger
 ===============
 
-Express middleware for log files.
+Express middleware for auto-archiving log files.
 
 This middleware builds on the built-in Express logger.  It will automatically rotate your logs and archive the old logs daily.
 
