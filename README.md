@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/joehewitt/express-logger.png)](http://travis-ci.org/joehewitt/express-logger)
 express-logger
 ===============
 
