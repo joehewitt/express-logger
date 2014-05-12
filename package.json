@@ -11,7 +11,7 @@
   "author": "Joe Hewitt <joe@joehewitt.com>",
   "dependencies": {
     "datetime": "",
-    "express": "",
+    "express": "2.5.9",
     "mkdir": ""
   },
   "engines": { "node": ">=0.4.0" },
