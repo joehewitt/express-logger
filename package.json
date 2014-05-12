@@ -1,19 +1,24 @@
 {
   "name": "express-logger",
   "description": "Express middleware for auto-archiving log files.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "http://github.com/joehewitt/express-logger",
   "repository": {
-      "type": "git",
-      "url" : "http://github.com/joehewitt/express-logger.git"
+    "type": "git",
+    "url": "http://github.com/joehewitt/express-logger.git"
   },
-  "keywords": ["express", "logger"],
+  "keywords": [
+    "express",
+    "logger"
+  ],
   "author": "Joe Hewitt <joe@joehewitt.com>",
   "dependencies": {
     "datetime": "",
     "express": "2.5.9",
     "mkdir": ""
   },
-  "engines": { "node": ">=0.4.0" },
+  "engines": {
+    "node": ">=0.4.0"
+  },
   "main": "./logger"
 }
