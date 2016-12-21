@@ -52,7 +52,11 @@ function copyFile(src, dst, cb) {
 
             var is = fs.createReadStream(src);
             var os = fs.createWriteStream(dst);
-            util.pump(is, os, cb);
+
+            is.on("error", cb);
+            os.on("error", cb);
+            os.on("close", cb);
+            is.pipe (os);            
       });
     });
 }
