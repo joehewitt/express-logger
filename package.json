@@ -14,8 +14,8 @@
   "author": "Joe Hewitt <joe@joehewitt.com>",
   "dependencies": {
     "datetime": "",
-    "express": "2.5.9",
-    "mkdir": ""
+    "mkdir": "",
+    "morgan": "^1.8.2"
   },
   "engines": {
     "node": ">=0.4.0"
