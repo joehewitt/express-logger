@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var util = require('util');
 var datetime = require('datetime');
-var express = require('express');
+var morgan = require('morgan');
 var mkdirsSync = require('mkdir').mkdirsSync;
 
 // *************************************************************************************************
@@ -17,7 +17,7 @@ module.exports = function(options) {
     mkdirsSync(path.dirname(options.path));
 
     var logStream = fs.createWriteStream(options.path, {flags: 'a'});
-    var logger = express.logger({stream: logStream, format: options.format});
+    var logger = morgan({stream: logStream, format: options.format});
 
     // XXXjoe Need to expose a way to cancel this timer
     var archiveInterval = setInterval(function() {
@@ -52,7 +52,11 @@ function copyFile(src, dst, cb) {
 
             var is = fs.createReadStream(src);
             var os = fs.createWriteStream(dst);
-            util.pump(is, os, cb);
+
+            is.on("error", cb);
+            os.on("error", cb);
+            os.on("close", cb);
+            is.pipe (os);            
       });
     });
 }
