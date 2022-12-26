@@ -1,7 +1,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var util = require('util');
 var datetime = require('datetime');
 var express = require('express');
 var mkdirsSync = require('mkdir').mkdirsSync;
@@ -52,7 +51,7 @@ function copyFile(src, dst, cb) {
 
             var is = fs.createReadStream(src);
             var os = fs.createWriteStream(dst);
-            util.pump(is, os, cb);
+            is.pipe(os, cb);
       });
     });
 }
